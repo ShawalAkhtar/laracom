@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 /*
@@ -15,5 +14,6 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-
+Route::get('/', [ProductController::class,'index']);
 Route::get('/login', [LoginController::class,'view']);
+Route::post('/login', [LoginController::class,'login']);
